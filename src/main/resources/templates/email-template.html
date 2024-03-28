@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Result</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .email-template {
+            border-radius: 10px;
+            border-top: 3px solid #4b0082;
+            border-left: 3px solid #4b0082;
+            border-right: 3px solid #4b0082;
+            background: linear-gradient(#F5C63C, #FFB32B, #F47F6B, #BB5098, #7A5197, #4b0082);
+            width: 600px;
+            margin: 0 auto 0;
+            box-sizing: border-box;
+            padding: 10px 20px 20px 20px;
+        }
+
+        .header img {
+            width: 100px;
+            margin-left: calc(50% - 280px);
+        }
+
+        .content {
+            border-radius: 10px;
+            color: #4b0082;
+            box-sizing: border-box;
+        }
+
+        .content > p, span {
+            font-size: 22px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h3 {
+            color: #4b0082;
+        }
+
+        .img-book {
+        }
+
+        .footer {
+            width: 100%;
+            color: #fff;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+            border-radius: 0 10px 10px;
+            margin: 50px 100px 0 0;
+        }
+
+        .footer img {
+            width: 20px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        h6 {
+            color: #98a2b3;
+            font-size: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <div class="email-template">
+            <div class="header">
+                <img src="https://billingual-10.s3.eu-central-1.amazonaws.com/1701182243523newBBBlogoo.png"
+                     alt="Logo">
+            </div>
+            <div class="content"
+                 th:each="usersName:${userName}">
+                <span th:text=" ${greeting}"></span>
+                <span th:text=" ${usersName}"></span>
+                <p>Bilingual Team incredibly proud of you! </p>
+                <p>We always knew you could do it !!!</p>
+                <p>Your result of <span th:text="${testTitle}"></span></p>
+                <span style="color: white">You scored <span th:text="${usersScore}"></span>  points out of <span
+                        th:text="${maxScore}"></span> </span>
+            </div>
+            <div class="img-book">
+                <img src="https://billingual-10.s3.eu-central-1.amazonaws.com/1701186194899Riko.png"
+                     style="display: inline-block; width: 230px; height: 230px">
+                <img src="https://billingual-10.s3.eu-central-1.amazonaws.com/1701181862114newBooooks.png"
+                     style="display: inline-block; width:300px; height:300px">
+            </div>
+            <div class="footer">
+                <a href="https://www.youtube.com/"><img
+                        src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_youtube-512.png"
+                        alt="YouTube"></a>
+                <a href="https://t.me/bilingualteam10"><img src="https://cdn.pixabay.com/photo/2020/10/17/13/21/telegram-5662082_1280.png"
+                                alt="Telegram"></a>
+                <a><img src="https://freelogopng.com/images/all_img/1658587303instagram-png.png" alt="Instagram"></a>
+                <h6>© Copyright PeakSoft. All Rights Reserved</h6>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
